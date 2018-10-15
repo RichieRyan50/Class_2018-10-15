@@ -7,5 +7,27 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(readxl)
+library(janitor)
+```
+
+```{r}
+e_18 <- read_excel("Fall 2018.xlsx", 
+                   skip = 2) %>%
+  clean_names()
+
+
+e_17 <- read_excel("Fall 2017.xlsx", 
+                   skip = 2) %>% 
+  clean_names()
+
+
+e_16 <- read_excel("Fall 2016.xlsx", 
+                   skip = 2) %>% 
+  clean_names()
+
+
+e_15 <- read_excel("Fall 2015.xlsx")
 ```
 
